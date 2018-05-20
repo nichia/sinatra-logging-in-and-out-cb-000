@@ -4,11 +4,12 @@ class Helpers
   end
 
   def self.is_logged_in?(session)
-    # check if session[:user_id] == nil, user is not logged in
-    if session[:user_id] == nil
-      false
-    else
-      true
-    end
+    # check if session[:user_id] == nil, return true if user is logged in, underwise, return false
+    !!session[:user_id]
+    #if session[:user_id] == nil
+    #  false
+    #else
+    #  true
+    #end
   end
 end
